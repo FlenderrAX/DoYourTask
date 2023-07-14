@@ -36,7 +36,7 @@ Launch the debug to get the executable
 ![App Screenshot](https://zupimages.net/up/23/28/6jsn.png)
 
 
-## Authors
+## Author
 
 - [@flenderr](https://www.github.com/FlenderrAX)
 
