@@ -1,0 +1,13 @@
+D:\Bureau\DYT_CS\DYT_CS\DYT_CS\obj\Debug\DYT_CS.csproj.AssemblyReference.cache
+D:\Bureau\DYT_CS\DYT_CS\DYT_CS\obj\Debug\DYT_CS.Form1.resources
+D:\Bureau\DYT_CS\DYT_CS\DYT_CS\obj\Debug\DYT_CS.Properties.Resources.resources
+D:\Bureau\DYT_CS\DYT_CS\DYT_CS\obj\Debug\DYT_CS.csproj.GenerateResource.cache
+D:\Bureau\DYT_CS\DYT_CS\DYT_CS\obj\Debug\DYT_CS.csproj.CoreCompileInputs.cache
+D:\Bureau\DYT_CS\DYT_CS\DYT_CS\bin\Debug\Guna.UI2.dll
+D:\Bureau\DYT_CS\DYT_CS\DYT_CS\obj\Debug\DYT_CS.csproj.CopyComplete
+D:\Bureau\DYT_CS\DYT_CS\DYT_CS\obj\Debug\DYT_CS.Form2.resources
+D:\Bureau\DYT_CS\DYT_CS\DYT_CS\bin\Debug\DoYourTask.exe.config
+D:\Bureau\DYT_CS\DYT_CS\DYT_CS\bin\Debug\DoYourTask.exe
+D:\Bureau\DYT_CS\DYT_CS\DYT_CS\bin\Debug\DoYourTask.pdb
+D:\Bureau\DYT_CS\DYT_CS\DYT_CS\obj\Debug\DoYourTask.exe
+D:\Bureau\DYT_CS\DYT_CS\DYT_CS\obj\Debug\DoYourTask.pdb
