@@ -25,7 +25,7 @@ namespace DYT_CS
         {
             if (string.IsNullOrEmpty(guna2TextBox1.Text) || string.IsNullOrEmpty(guna2ComboBox1.Text) || string.IsNullOrEmpty(guna2ComboBox2.Text))
             {
-                MessageBox.Show("Vous devez remplir les champs !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("You must fill in the fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -64,7 +64,7 @@ namespace DYT_CS
         {
             if (listBox1.SelectedIndex == -1)
             {
-                MessageBox.Show("Vous devez séléctionner une tâche !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("You must select a task!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -89,11 +89,11 @@ namespace DYT_CS
             string savePath = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "save.txt");
             if (!File.Exists(savePath))
             {
-                DialogResult dialogResult = MessageBox.Show("Le fichier de sauvegarde de tâche est introuvable !\nVoulez vous le créer ?", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult dialogResult = MessageBox.Show("The task save file could not be found!\nDo you want to create it?", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dialogResult == DialogResult.Yes)
                 {
                     File.Create(savePath).Close();
-                    MessageBox.Show("Le fichier a été créé avec succès !", "Fichier de sauvegarde", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("The file has been successfully created!", "Save File", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -114,7 +114,7 @@ namespace DYT_CS
         {
             if (listBox1.SelectedIndex == -1)
             {
-                MessageBox.Show("Vous devez séléctionner une tâche !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("You must select a task!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {

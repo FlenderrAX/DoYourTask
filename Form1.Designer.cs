@@ -63,7 +63,7 @@ namespace DYT_CS
             this.guna2Button6.Name = "guna2Button6";
             this.guna2Button6.Size = new System.Drawing.Size(200, 45);
             this.guna2Button6.TabIndex = 1;
-            this.guna2Button6.Text = "Ajouter";
+            this.guna2Button6.Text = "Add";
             this.guna2Button6.Click += new System.EventHandler(this.guna2Button6_Click);
             // 
             // guna2Button9
@@ -81,7 +81,7 @@ namespace DYT_CS
             this.guna2Button9.Name = "guna2Button9";
             this.guna2Button9.Size = new System.Drawing.Size(200, 45);
             this.guna2Button9.TabIndex = 5;
-            this.guna2Button9.Text = "Supprimer";
+            this.guna2Button9.Text = "Remove";
             this.guna2Button9.Click += new System.EventHandler(this.guna2Button9_Click);
             // 
             // guna2TextBox1
@@ -110,9 +110,9 @@ namespace DYT_CS
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.White;
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(518, 148);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(122, 13);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(66, 13);
             this.guna2HtmlLabel2.TabIndex = 10;
-            this.guna2HtmlLabel2.Text = "Nom de la tâche :";
+            this.guna2HtmlLabel2.Text = "Task name";
             // 
             // guna2HtmlLabel3
             // 
@@ -123,7 +123,7 @@ namespace DYT_CS
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(122, 13);
             this.guna2HtmlLabel3.TabIndex = 11;
-            this.guna2HtmlLabel3.Text = "Tâches en cours :";
+            this.guna2HtmlLabel3.Text = "Tasks in progress";
             // 
             // guna2HtmlLabel5
             // 
@@ -132,9 +132,9 @@ namespace DYT_CS
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.White;
             this.guna2HtmlLabel5.Location = new System.Drawing.Point(518, 219);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(115, 13);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(59, 13);
             this.guna2HtmlLabel5.TabIndex = 14;
-            this.guna2HtmlLabel5.Text = "Date de remise :";
+            this.guna2HtmlLabel5.Text = "Due date";
             // 
             // guna2HtmlLabel6
             // 
@@ -145,7 +145,7 @@ namespace DYT_CS
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(59, 13);
             this.guna2HtmlLabel6.TabIndex = 16;
-            this.guna2HtmlLabel6.Text = "Priorité";
+            this.guna2HtmlLabel6.Text = "Priority";
             // 
             // guna2HtmlLabel7
             // 
@@ -154,9 +154,9 @@ namespace DYT_CS
             this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.White;
             this.guna2HtmlLabel7.Location = new System.Drawing.Point(518, 360);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(108, 13);
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(66, 13);
             this.guna2HtmlLabel7.TabIndex = 18;
-            this.guna2HtmlLabel7.Text = "Team de tâche :";
+            this.guna2HtmlLabel7.Text = "Task team";
             // 
             // guna2DateTimePicker1
             // 
@@ -208,7 +208,7 @@ namespace DYT_CS
             this.guna2Button8.Name = "guna2Button8";
             this.guna2Button8.Size = new System.Drawing.Size(200, 45);
             this.guna2Button8.TabIndex = 22;
-            this.guna2Button8.Text = "Afficher les informations";
+            this.guna2Button8.Text = "Show Informations";
             this.guna2Button8.Click += new System.EventHandler(this.guna2Button8_Click);
             // 
             // guna2Button12
