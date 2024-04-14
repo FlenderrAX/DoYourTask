@@ -13,6 +13,8 @@ namespace DYT_CS
 {
     public partial class Form1 : Form
     {
+        private int? indexToRemove = null;
+
         public Form1()
         {
             InitializeComponent();
@@ -21,36 +23,31 @@ namespace DYT_CS
 
         public void guna2Button6_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(guna2TextBox1.Text) & string.IsNullOrEmpty(guna2ComboBox1.Text) & string.IsNullOrEmpty(guna2ComboBox2.Text))
+            if (string.IsNullOrEmpty(guna2TextBox1.Text) || string.IsNullOrEmpty(guna2ComboBox1.Text) || string.IsNullOrEmpty(guna2ComboBox2.Text))
             {
                 MessageBox.Show("Vous devez remplir les champs !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                string text = guna2TextBox1.Text + ":" + guna2DateTimePicker1.Value.ToShortDateString() + ":" + guna2ComboBox2.SelectedItem.ToString() + ":" + guna2ComboBox1.SelectedItem.ToString();
-                Console.WriteLine(text);
-                var task_name = text.Split(':')[0];
-                string sPath = Path.GetDirectoryName(Application.ExecutablePath) + @"\save.txt";
-                System.IO.StreamWriter SaveFile = new System.IO.StreamWriter(sPath, true);
-                SaveFile.WriteLine(text);
-                SaveFile.ToString();
-                SaveFile.Close();
-                checkedListBox1.Items.Add(task_name);
-                guna2TextBox1.Text = String.Empty;
-                guna2DateTimePicker1.Value = DateTime.Now;
-                guna2ComboBox1.SelectedItem = null;
-                guna2ComboBox2.SelectedItem = null;
+                string taskDetails = $"{guna2TextBox1.Text}:{guna2DateTimePicker1.Value.ToShortDateString()}:{guna2ComboBox2.SelectedItem}:{guna2ComboBox1.SelectedItem}";
+                Console.WriteLine(taskDetails);
+                string taskName = taskDetails.Split(':')[0];
+                string savePath = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "save.txt");
+                using (StreamWriter saveFile = new StreamWriter(savePath, true))
+                {
+                    saveFile.WriteLine(taskDetails);
+                }
+                listBox1.Items.Add(taskName);
+                ResetForm();
             }
         }
 
-        public void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        private void ResetForm()
         {
-
-        }
-
-        public void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            guna2TextBox1.Text = String.Empty;
+            guna2DateTimePicker1.Value = DateTime.Now;
+            guna2ComboBox1.SelectedItem = null;
+            guna2ComboBox2.SelectedItem = null;
         }
 
         private void guna2Button12_Click(object sender, EventArgs e)
@@ -65,80 +62,67 @@ namespace DYT_CS
 
         private void guna2Button8_Click(object sender, EventArgs e)
         {
-            checkedListBox1.SelectedItem.ToString();
-        }
-
-        public void guna2Button8_Click_1(object sender, EventArgs e)
-        {
-            if (checkedListBox1.SelectedIndex == -1)
+            if (listBox1.SelectedIndex == -1)
             {
                 MessageBox.Show("Vous devez séléctionner une tâche !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                var systemPath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase);
-                string sPath = Path.GetDirectoryName(Application.ExecutablePath) + @"\save.txt";
-                string[] readText = File.ReadAllLines(sPath);
-                foreach (string s in readText)
+                string selectedTaskName = listBox1.SelectedItem.ToString();
+                string savePath = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "save.txt");
+                string[] taskLines = File.ReadAllLines(savePath);
+                foreach (string line in taskLines)
                 {
-                    string split_text = s.Split(':')[0];
-                    if (checkedListBox1.SelectedItem.ToString() == split_text)
+                    string[] taskDetails = line.Split(':');
+                    if (taskDetails[0] == selectedTaskName)
                     {
-                        string task_name = split_text;
-                        string task_time = s.Split(':')[1];
-                        string task_priority = s.Split(':')[2];
-                        string task_team = s.Split(':')[3];
-                        Form2 f2 = new Form2(task_name, task_time, task_priority, task_team);
-                        f2.Show();
+                        Form2 form2 = new Form2(taskDetails[0], taskDetails[1], taskDetails[2], taskDetails[3]);
+                        form2.Show();
+                        break;
                     }
                 }
             }
-
-        }
-
-        public void guna2DateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        public void guna2ComboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        public void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string sPath = Path.GetDirectoryName(Application.ExecutablePath) + @"\save.txt";
-            if (File.Exists(sPath) == false)
+            string savePath = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "save.txt");
+            if (!File.Exists(savePath))
             {
                 DialogResult dialogResult = MessageBox.Show("Le fichier de sauvegarde de tâche est introuvable !\nVoulez vous le créer ?", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    File.Create(sPath);
-                    DialogResult created_succes = MessageBox.Show("Le fichier a été créé avec succès !", "Fichier de sauvegarde", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    if (created_succes == DialogResult.OK)
-                    {
-                        Application.Exit();
-                    }
+                    File.Create(savePath).Close();
+                    MessageBox.Show("Le fichier a été créé avec succès !", "Fichier de sauvegarde", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else if (dialogResult == DialogResult.No)
+                else
                 {
                     Application.Exit();
                 }
             }
-            else if (File.Exists(sPath))
+            else
             {
-                string[] readText = File.ReadAllLines(sPath);
-                foreach (string s in readText)
+                string[] taskNames = File.ReadAllLines(savePath);
+                foreach (string taskName in taskNames)
                 {
-                    string split_text = s.Split(':')[0];
-                    checkedListBox1.Items.Add(split_text);
+                    listBox1.Items.Add(taskName.Split(':')[0]);
                 }
+            }
+        }
+
+        private void guna2Button9_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex == -1)
+            {
+                MessageBox.Show("Vous devez séléctionner une tâche !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                string selectedTaskName = listBox1.SelectedItem.ToString();
+                string savePath = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "save.txt");
+                var taskLines = File.ReadAllLines(savePath).Where(line => !line.Contains(selectedTaskName));
+                File.WriteAllLines(savePath, taskLines);
+                listBox1.Items.RemoveAt(listBox1.SelectedIndex);
             }
         }
 
@@ -149,27 +133,7 @@ namespace DYT_CS
 
         private void guna2Button13_Click_1(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void guna2Button9_Click(object sender, EventArgs e)
-        {
-            if (checkedListBox1.SelectedIndex == -1)
-            {
-                MessageBox.Show("Vous devez séléctionner une tâche !", "Error", MessageBoxButtons.OK ,MessageBoxIcon.Warning);
-            }
-            else
-            {
-                int element = checkedListBox1.SelectedIndex;
-                string sPath = Path.GetDirectoryName(Application.ExecutablePath) + @"\save.txt";
-                string word = Convert.ToString(checkedListBox1.SelectedItem);  
-                var oldLines = System.IO.File.ReadAllLines(sPath);
-                var newLines = oldLines.Where(line => !line.Contains(word));
-                System.IO.File.WriteAllLines(sPath, newLines);
-                FileStream obj = new FileStream(sPath, FileMode.Append);
-                obj.Close();
-                checkedListBox1.Items.RemoveAt(element);
-            }
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

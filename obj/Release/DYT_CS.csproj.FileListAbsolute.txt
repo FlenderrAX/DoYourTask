@@ -1,0 +1,13 @@
+E:\flenderr\Desktop\DoYourTask\obj\Release\DYT_CS.csproj.AssemblyReference.cache
+E:\flenderr\Desktop\DoYourTask\obj\Release\DYT_CS.Form1.resources
+E:\flenderr\Desktop\DoYourTask\obj\Release\DYT_CS.Form2.resources
+E:\flenderr\Desktop\DoYourTask\obj\Release\DYT_CS.Properties.Resources.resources
+E:\flenderr\Desktop\DoYourTask\obj\Release\DYT_CS.csproj.GenerateResource.cache
+E:\flenderr\Desktop\DoYourTask\obj\Release\DYT_CS.csproj.CoreCompileInputs.cache
+E:\flenderr\Desktop\DoYourTask\bin\Release\DoYourTask.exe.config
+E:\flenderr\Desktop\DoYourTask\bin\Release\DoYourTask.exe
+E:\flenderr\Desktop\DoYourTask\bin\Release\DoYourTask.pdb
+E:\flenderr\Desktop\DoYourTask\bin\Release\Guna.UI2.dll
+E:\flenderr\Desktop\DoYourTask\obj\Release\DYT_CS.csproj.Up2Date
+E:\flenderr\Desktop\DoYourTask\obj\Release\DoYourTask.exe
+E:\flenderr\Desktop\DoYourTask\obj\Release\DoYourTask.pdb
