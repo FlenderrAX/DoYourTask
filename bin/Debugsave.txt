@@ -1,1 +1,0 @@
-System.Windows.Forms.CheckedListBox+ObjectCollection
