@@ -8,36 +8,49 @@ using System.Text;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Guna.UI2.WinForms;
 
 namespace DYT_CS
 {
     public partial class Form1 : Form
     {
-        private int? indexToRemove = null;
-
         public Form1()
         {
             InitializeComponent();
-            this.Text = "DoYourTask - Flenderr's";
+            string appVersion = "v0.1.1";
+            this.Text = $"DoYourTask - {appVersion}";
         }
 
         public void guna2Button6_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(guna2TextBox1.Text) || string.IsNullOrEmpty(guna2ComboBox1.Text) || string.IsNullOrEmpty(guna2ComboBox2.Text))
+            if (string.IsNullOrEmpty(guna2TextBox1.Text) || string.IsNullOrEmpty(richTextBox1.Text) || string.IsNullOrEmpty(guna2ComboBox2.Text))
             {
                 MessageBox.Show("You must fill in the fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
             else
             {
-                string taskDetails = $"{guna2TextBox1.Text}:{guna2DateTimePicker1.Value.ToShortDateString()}:{guna2ComboBox2.SelectedItem}:{guna2ComboBox1.SelectedItem}";
-                Console.WriteLine(taskDetails);
+                string taskLongDate = guna2DateTimePicker1.Value.ToString();
+                string taskDate = taskLongDate.Split(' ')[0];
+                string taskTime = taskLongDate.Split(' ')[1];
+                int taskDay = Int32.Parse(taskDate.Split('/')[0]);
+                int taskMonth = Int32.Parse(taskDate.Split('/')[1]);
+                int taskYear = Int32.Parse(taskDate.Split('/')[2]);
+                int taskHour = Int32.Parse(taskTime.Split(':')[0]);
+                int taskMinute = Int32.Parse(taskTime.Split(':')[1]);
+                int taskSeconds = Int32.Parse(taskTime.Split(':')[2]);
+                
+                string taskDetails = $"{guna2TextBox1.Text}:{taskDay}/{taskMonth}/{taskYear} - {taskHour}/{taskMinute}/{taskSeconds}:{guna2ComboBox2.SelectedItem}:{richTextBox1.Text}";
                 string taskName = taskDetails.Split(':')[0];
+                string taskPriority = taskDetails.Split(':')[2];
                 string savePath = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "save.txt");
+
                 using (StreamWriter saveFile = new StreamWriter(savePath, true))
                 {
                     saveFile.WriteLine(taskDetails);
                 }
-                listBox1.Items.Add(taskName);
+                listBox1.Items.Add($"{taskName} - {taskPriority}");
+
                 ResetForm();
             }
         }
@@ -46,7 +59,7 @@ namespace DYT_CS
         {
             guna2TextBox1.Text = String.Empty;
             guna2DateTimePicker1.Value = DateTime.Now;
-            guna2ComboBox1.SelectedItem = null;
+            richTextBox1.Text = String.Empty;
             guna2ComboBox2.SelectedItem = null;
         }
 
@@ -68,7 +81,7 @@ namespace DYT_CS
             }
             else
             {
-                string selectedTaskName = listBox1.SelectedItem.ToString();
+                string selectedTaskName = listBox1.SelectedItem.ToString().Split('-')[0].Trim();
                 string savePath = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "save.txt");
                 string[] taskLines = File.ReadAllLines(savePath);
                 foreach (string line in taskLines)
@@ -105,7 +118,7 @@ namespace DYT_CS
                 string[] taskNames = File.ReadAllLines(savePath);
                 foreach (string taskName in taskNames)
                 {
-                    listBox1.Items.Add(taskName.Split(':')[0]);
+                    listBox1.Items.Add($"{taskName.Split(':')[0]} - {taskName.Split(':')[2]}");
                 }
             }
         }
@@ -113,12 +126,12 @@ namespace DYT_CS
         private void guna2Button9_Click(object sender, EventArgs e)
         {
             if (listBox1.SelectedIndex == -1)
-            {
+            { 
                 MessageBox.Show("You must select a task!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                string selectedTaskName = listBox1.SelectedItem.ToString();
+                string selectedTaskName = listBox1.SelectedItem.ToString().Split('-')[0].TrimEnd();
                 string savePath = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "save.txt");
                 var taskLines = File.ReadAllLines(savePath).Where(line => !line.Contains(selectedTaskName));
                 File.WriteAllLines(savePath, taskLines);
@@ -134,6 +147,10 @@ namespace DYT_CS
         private void guna2Button13_Click_1(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void guna2DateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
         }
     }
 }

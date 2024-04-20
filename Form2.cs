@@ -15,25 +15,24 @@ namespace DYT_CS
         private string taskName;
         private string taskTime;
         private string taskPriority;
-        private string taskTeam;
+        private string taskDesc;
 
-        public Form2(string taskName, string taskTime, string taskPriority, string taskTeam)
+        public Form2(string taskName, string taskTime, string taskPriority, string taskDesc)
         {
             InitializeComponent();
             this.taskName = taskName;
             this.taskTime = taskTime;
             this.taskPriority = taskPriority;
-            this.taskTeam = taskTeam;
+            this.taskDesc = taskDesc;
             this.Text = $"DoYourTask - {taskName}";
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            guna2HtmlLabel1.Text = taskName;
-            guna2HtmlLabel2.Text = $"Task name: {taskName}<br/>" +
-                                   $"Due date: {taskTime}<br/>" +
-                                   $"Task priority: {taskPriority}<br/>" +
-                                   $"Task team: {taskTeam}";
+            guna2HtmlLabel2.Text = $"<span style='color: #2a654c; font-weight: bold;'>Task name:</span> {taskName}<br/>" +
+                $"<span style='color: #2a654c; font-weight: bold;'>Task description:</span> {taskDesc}<br/>" +
+                $"<span style='color: #2a654c; font-weight: bold;'>Due date:</span> {taskTime}<br/>" +
+                $"<span style='color: #2a654c; font-weight: bold;'>Task priority:</span> {taskPriority}";
         }
 
         private void guna2Button12_Click(object sender, EventArgs e)
