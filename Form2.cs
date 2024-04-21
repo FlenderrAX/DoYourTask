@@ -26,7 +26,6 @@ namespace DYT_CS
             this.taskDesc = taskDesc;
             this.Text = $"DoYourTask - {taskName}";
         }
-
         private void Form2_Load(object sender, EventArgs e)
         {
             guna2HtmlLabel2.Text = $"<span style='color: #2a654c; font-weight: bold;'>Task name:</span> {taskName}<br/>" +

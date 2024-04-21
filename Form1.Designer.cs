@@ -43,15 +43,15 @@ namespace DYT_CS
             this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button12 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button13 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.SuspendLayout();
             // 
             // guna2Button6
             // 
+            this.guna2Button6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2Button6.Animated = true;
-            this.guna2Button6.AutoRoundedCorners = true;
             this.guna2Button6.BorderRadius = 21;
             this.guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -69,8 +69,8 @@ namespace DYT_CS
             // 
             // guna2Button9
             // 
+            this.guna2Button9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2Button9.Animated = true;
-            this.guna2Button9.AutoRoundedCorners = true;
             this.guna2Button9.BorderRadius = 21;
             this.guna2Button9.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button9.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -88,6 +88,7 @@ namespace DYT_CS
             // 
             // guna2TextBox1
             // 
+            this.guna2TextBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox1.DefaultText = "";
             this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -96,6 +97,7 @@ namespace DYT_CS
             this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.Font = new System.Drawing.Font("Quantico", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBox1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.Location = new System.Drawing.Point(518, 147);
             this.guna2TextBox1.Name = "guna2TextBox1";
@@ -107,6 +109,7 @@ namespace DYT_CS
             // 
             // guna2HtmlLabel2
             // 
+            this.guna2HtmlLabel2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Quantico", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.White;
@@ -115,9 +118,11 @@ namespace DYT_CS
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(67, 21);
             this.guna2HtmlLabel2.TabIndex = 10;
             this.guna2HtmlLabel2.Text = "Task name";
+            this.guna2HtmlLabel2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2HtmlLabel3
             // 
+            this.guna2HtmlLabel3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Quantico", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.White;
@@ -126,9 +131,11 @@ namespace DYT_CS
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(109, 21);
             this.guna2HtmlLabel3.TabIndex = 11;
             this.guna2HtmlLabel3.Text = "Tasks in progress";
+            this.guna2HtmlLabel3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2HtmlLabel5
             // 
+            this.guna2HtmlLabel5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Quantico", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.White;
@@ -137,9 +144,11 @@ namespace DYT_CS
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(57, 21);
             this.guna2HtmlLabel5.TabIndex = 14;
             this.guna2HtmlLabel5.Text = "Due date";
+            this.guna2HtmlLabel5.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2HtmlLabel6
             // 
+            this.guna2HtmlLabel6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Quantico", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.White;
@@ -148,9 +157,11 @@ namespace DYT_CS
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(47, 21);
             this.guna2HtmlLabel6.TabIndex = 16;
             this.guna2HtmlLabel6.Text = "Priority";
+            this.guna2HtmlLabel6.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2HtmlLabel7
             // 
+            this.guna2HtmlLabel7.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Quantico", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.White;
@@ -159,13 +170,16 @@ namespace DYT_CS
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(104, 21);
             this.guna2HtmlLabel7.TabIndex = 18;
             this.guna2HtmlLabel7.Text = "Task Description";
+            this.guna2HtmlLabel7.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2DateTimePicker1
             // 
+            this.guna2DateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.guna2DateTimePicker1.Checked = true;
             this.guna2DateTimePicker1.CustomFormat = "MM/dd/yyyy hh:mm:ss";
             this.guna2DateTimePicker1.FillColor = System.Drawing.Color.White;
             this.guna2DateTimePicker1.Font = new System.Drawing.Font("Quantico", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2DateTimePicker1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.guna2DateTimePicker1.Location = new System.Drawing.Point(518, 324);
             this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
@@ -179,13 +193,14 @@ namespace DYT_CS
             // 
             // guna2ComboBox2
             // 
+            this.guna2ComboBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
             this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.guna2ComboBox2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2ComboBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2ComboBox2.Font = new System.Drawing.Font("Quantico", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.guna2ComboBox2.ForeColor = System.Drawing.SystemColors.WindowText;
             this.guna2ComboBox2.ItemHeight = 30;
             this.guna2ComboBox2.Items.AddRange(new object[] {
             "High",
@@ -198,8 +213,8 @@ namespace DYT_CS
             // 
             // guna2Button8
             // 
+            this.guna2Button8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2Button8.Animated = true;
-            this.guna2Button8.AutoRoundedCorners = true;
             this.guna2Button8.BorderRadius = 21;
             this.guna2Button8.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button8.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -209,6 +224,7 @@ namespace DYT_CS
             this.guna2Button8.Font = new System.Drawing.Font("Quantico", 12F);
             this.guna2Button8.ForeColor = System.Drawing.Color.White;
             this.guna2Button8.Location = new System.Drawing.Point(300, 370);
+            this.guna2Button8.MinimumSize = new System.Drawing.Size(0, 30);
             this.guna2Button8.Name = "guna2Button8";
             this.guna2Button8.Size = new System.Drawing.Size(200, 45);
             this.guna2Button8.TabIndex = 22;
@@ -217,6 +233,7 @@ namespace DYT_CS
             // 
             // guna2Button12
             // 
+            this.guna2Button12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Button12.Animated = true;
             this.guna2Button12.BorderRadius = 10;
             this.guna2Button12.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -235,6 +252,7 @@ namespace DYT_CS
             // 
             // guna2Button13
             // 
+            this.guna2Button13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Button13.Animated = true;
             this.guna2Button13.BorderRadius = 10;
             this.guna2Button13.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -251,19 +269,9 @@ namespace DYT_CS
             this.guna2Button13.Text = "−";
             this.guna2Button13.Click += new System.EventHandler(this.guna2Button13_Click_1);
             // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Quantico", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(12, 12);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(370, 93);
-            this.guna2HtmlLabel1.TabIndex = 25;
-            this.guna2HtmlLabel1.Text = "DoYourTask";
-            // 
             // listBox1
             // 
+            this.listBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.listBox1.Font = new System.Drawing.Font("Quantico", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
@@ -274,12 +282,24 @@ namespace DYT_CS
             // 
             // richTextBox1
             // 
+            this.richTextBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.richTextBox1.Font = new System.Drawing.Font("Quantico", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(518, 205);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(270, 82);
             this.richTextBox1.TabIndex = 28;
             this.richTextBox1.Text = "";
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Quantico", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(370, 93);
+            this.guna2HtmlLabel1.TabIndex = 25;
+            this.guna2HtmlLabel1.Text = "DoYourTask";
             // 
             // Form1
             // 
@@ -304,11 +324,12 @@ namespace DYT_CS
             this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.guna2Button9);
             this.Controls.Add(this.guna2Button6);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "w";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.SizeChanged += new System.EventHandler(this.sizeChanged);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -337,9 +358,9 @@ namespace DYT_CS
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
         private Guna.UI2.WinForms.Guna2Button guna2Button12;
         private Guna.UI2.WinForms.Guna2Button guna2Button13;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }
 

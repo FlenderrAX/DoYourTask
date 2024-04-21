@@ -19,6 +19,9 @@ namespace DYT_CS
             InitializeComponent();
             string appVersion = "v0.1.1";
             this.Text = $"DoYourTask - {appVersion}";
+
+            int screenWidth = Screen.PrimaryScreen.Bounds.Width;
+            int screenHeight = Screen.PrimaryScreen.Bounds.Height;
         }
 
         public void guna2Button6_Click(object sender, EventArgs e)
@@ -151,6 +154,11 @@ namespace DYT_CS
 
         private void guna2DateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
+        }
+
+        private void sizeChanged(object sender, EventArgs e)
+        {
+            guna2HtmlLabel1.Text = $"{guna2Button6.Height}";
         }
     }
 }
