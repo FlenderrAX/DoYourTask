@@ -1,8 +1,101 @@
-.vs/
+# .NET Core / .NET Framework
 bin/
 obj/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+packages/
+*.nuspec
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# Local History for Visual Studio
+.localhistory/
+
+# Mac
+*.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# User-specific files
 *.user
 *.suo
 *.userosscache
-*.userprefs
-*.sln.docstates
+*.suo
+*.tmp
+*.log
+
+# Build results
+*.dll
+*.exe
+*.pdb
+*.cache
+*.json
+
+# NUnit
+nunit3-console.exe
+nunit3-console.exe.config
+
+# Visual Studio Code
+.vscode/
+
+# JetBrains Rider
+.idea/
+
+# DotCover
+*.dotCover
+
+# Code coverage
+*.coverage
+*.coveragexml
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.suo
+*.tmp
+*.log
+
+# Package distribution
+*.vsix
+*.vscode
+*.tgz
+*.zip
+*.tar.gz
+
+# Windows Installer
+*.msi
+*.cab
+
+# Powershell
+*.ps1
+
+# others
+*.dbmdl
+*.dbschema
+*.docstates
+*.vs/
+*.vsix/
+*.pdb
+
+# Backup files
+*.bak
+*.swp
+*.swo
+
+# Test Results
+TestResults/
